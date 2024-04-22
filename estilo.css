@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #343b45;
+    color: #333;
+}
+
+
+header {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label {
+    cursor: pointer;
+    display: block;
+    height: 32px;
+    position: relative;
+    width: 32px;
+}
+
+.nav-toggle-label span {
+    background-color: white;
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 14px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    width: 100%;
+}
+
+.nav-toggle-label span:before,
+.nav-toggle-label span:after {
+    background-color: grey;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+}
+
+.nav-toggle-label span:before {
+    top: -8px;
+}
+
+.nav-toggle-label span:after {
+    top: 8px;
+}
+
+#nav-toggle:checked + .nav-toggle-label span {
+    background-color: transparent;
+    transform: rotate(45deg);
+}
+
+#nav-toggle:checked + .nav-toggle-label span:before {
+    transform: translateY(8px) rotate(90deg);
+}
+
+#nav-toggle:checked + .nav-toggle-label span:after {
+    transform: translateY(-8px) rotate(90deg);
+}
+
+.nav-menu {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav-menu li {
+    padding: 10px 20px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav:hover .nav-menu {
+    display: block;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: grey;
+    margin-bottom: 20px;
+    margin: 30px 0;
+    padding: 20px;
+}
+
+section h2 {
+    border-bottom: 10px solid red;
+    margin-bottom: 80px;
+    padding-bottom: 40px;
+    padding: 20px;
+    margin: 30px 0;
+    background-color: #3f555c;
+    flex: 1 200PX:;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #54595F;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 2px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
